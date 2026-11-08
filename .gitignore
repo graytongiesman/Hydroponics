@@ -16,6 +16,9 @@ Release/
 RTE/
 *.launch
 
+# Image metadata sidecars (XnView/Adobe), written next to the wiring photos
+*.xmp
+
 # OS
 .DS_Store
 Thumbs.db
