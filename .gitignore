@@ -16,6 +16,9 @@ Release/
 RTE/
 *.launch
 
+# Excel lock files, created while a workbook is open
+~$*
+
 # Image metadata sidecars (XnView/Adobe), written next to the wiring photos
 *.xmp
 
