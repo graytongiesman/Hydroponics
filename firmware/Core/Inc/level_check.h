@@ -12,6 +12,12 @@
 
 void level_check_init(void);
 
+// samples all 7 float switches once and advances their debounce state.
+// call exactly once per main-loop pass, before reading the getters below.
+// the getters are plain reads of the debounced state, so they can be called
+// in any order, any number of times - including zero - within a pass.
+void level_check_update(void);
+
 // main tank float switches
 bool tank_is_low(void);       // true: water at/below the LOW mark
 bool tank_below_refill(void); // true: water below the REFILL mark

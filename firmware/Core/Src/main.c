@@ -100,6 +100,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  // one sampling point for every float switch. the getters below are
+	  // plain reads of the debounced state afterwards, so branching past
+	  // one of them can't stall its debounce.
+	  level_check_update();
+
 	  // latches on once the level drops below the refill mark, and only
 	  // clears once the tank is actually topped back up to the full mark -
 	  // so yellow stays on for the whole refill cycle, not just until the
